@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function cargarNoticias() {
-    fetch("../noticias.json")
+    fetch("noticias.json")
         .then((response) => {
             if (!response.ok) {
                 throw new Error("No se pudo cargar el archivo JSON");
@@ -30,6 +30,7 @@ function cargarNoticias() {
                 "<p>Error al cargar las noticias.</p>";
         });
 }
+
     // Inicializar Google Maps
     window.initMap = function() {
         var location = { lat: -34.6037, lng: -58.3816 };
